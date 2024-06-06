@@ -103,9 +103,9 @@ transform = transforms.Compose([
     transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
 ])
 
-train_dataset = RainRemovalDataset('/Users/ponfu/PycharmProject/IEEE_image_process/rainy_image_dataset/training', train=True, transform=transform)
+train_dataset = RainRemovalDataset('rainy_image_dataset/training', train=True, transform=transform)
 train_loader = DataLoader(train_dataset, batch_size=batches, shuffle=True)
-val_dataset = RainRemovalDataset('/Users/ponfu/PycharmProject/IEEE_image_process/rainy_image_dataset/testing', train=True, transform=transform)
+val_dataset = RainRemovalDataset('rainy_image_dataset/testing', train=True, transform=transform)
 val_loader = DataLoader(val_dataset, batch_size=batches, shuffle=False)
 
 net = RainRemovalNet().to(device)
@@ -175,20 +175,20 @@ with torch.no_grad():
             base_image = resize(base_image, sizes[j])
             detail_image = resize(detail_image, sizes[j])
 
-            # 转换为 PIL 图像
+            # 轉為PIL圖像
             output_image_pil = to_pil_image(output_image)
             base_image_pil = to_pil_image(base_image)
             detail_image_pil = to_pil_image(detail_image)
 
-            # 对比度增强
+            # 增強對比度
             enhancer = ImageEnhance.Contrast(output_image_pil)
             output_image_pil = enhancer.enhance(contrast_factor)
 
-            # 锐利度增强
+            # 增強銳利度
             enhancer_sharpness = ImageEnhance.Sharpness(output_image_pil)
             output_image_pil = enhancer_sharpness.enhance(sharpness_factor)
 
-            # 转回 Tensor
+            # 轉回 Tensor
             output_image = to_tensor(output_image_pil)
             base_image = to_tensor(base_image_pil)
             detail_image = to_tensor(detail_image_pil)
