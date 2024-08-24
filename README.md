@@ -77,7 +77,7 @@ Here is an interactive comparison between the original rainy image and the image
 ## References
 This work was inspired by and built upon the following papers:
 1. **Removing rain from single images via a deep detail network** - Xueyang Fu Jiabin Huang Delu Zeng Yue Huang Xinghao Ding John Paisley IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2017
-
+[Original paper website](https://xueyangfu.github.io/projects/cvpr2017.html)
 
 
 ## License
