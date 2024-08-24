@@ -67,9 +67,11 @@ After training, the model is evaluated on the validation dataset. The script com
 Processed images are saved in the **'Train_IEEE_output_train_3'** directory with filenames indicating the batch and image number.
 #### Rain Removal Results
 Here is an interactive comparison between the original rainy image and the image after rain removal:
-![Rain Removal Process](https://github.com/PonNowJin/Single-Image-Deraining/blob/main/OutputDemo/image_6_rain.gif)
 
-
+<img src="https://github.com/PonNowJin/Single-Image-Deraining/blob/main/OutputDemo/image_6_1.gif" width="500"/>
+<img src="https://github.com/PonNowJin/Single-Image-Deraining/blob/main/OutputDemo/image_36.gif" width="500"/>
+<img src="https://github.com/PonNowJin/Single-Image-Deraining/blob/main/OutputDemo/image_16.gif" width="500"/>
+<img src="https://github.com/PonNowJin/Single-Image-Deraining/blob/main/OutputDemo/image_6.gif" width="500"/>
 
 
 ## References
